@@ -1,0 +1,872 @@
+﻿/* ==================== BODY, COLUMNS & CONTAINERS ==================== */
+
+body {
+	background-image: url('a.jpg');
+	background-repeat: repeat-x-y;
+	background-position: center top;
+	margin: 0px;
+	padding: 0px;
+	overflow: auto;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: .8em;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	background-color: #353524;
+}
+#menu
+{
+	margin-top: 10px;
+	color: black;
+	padding:11px;
+	height: 40px;
+	margin-left:40px;
+	margin-bottom:60px;
+}
+
+#lastOption
+{
+	color:white;
+	float: left;
+	font-size: 18px;
+	padding:1%;
+	background-color:#444444;
+	height: 25px;	
+	margin-top:1%;
+	text-align:center;
+	width:21.6%;
+}
+
+#lastOption:hover
+{
+	background-color: red;
+}
+a.tilelink
+{
+	color:white;
+	text-decoration: none;
+	height: 25px;
+	width:21.6%;
+}
+
+.tankTileLink
+{
+	background-color: red;
+	width: 230px;
+    height: 142px;
+}
+
+
+#banner {
+	background-image: url(' banner.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding: 0px;
+	margin: 0px auto 0px auto;
+	width: 990px;
+	height: 194px;
+	position: relative;
+	overflow: visible;
+}
+
+/* Some stylesheet reset */
+.nav, .nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 100%;
+}
+
+/* The main container */
+.nav {
+	/* Layout and positioning */
+	display: block;
+	position: relative;
+	height: 26px;
+	width: 940px; /* CHANGE this if you want another width or remove it if you want the width of the container */
+	border-radius: 3px;
+	border: 0px;
+
+	/* Background and effects */
+}
+
+.nav>li {
+	display: block;
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0 1px 0 0;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #D8CD97;
+	height: 26px;
+	line-height: 50%;
+}
+
+/* The main navigation links */
+.nav>li>a {
+	/* Layout */
+	display: block;
+	padding: 11px 20px;
+/* Typography */font-weight: normal;
+	text-decoration: none;
+	color: #333333;
+	font-size: 180%;
+}
+
+/* The hover state of the navigation links */
+.nav>li>a:hover, .nav>li:hover>a {
+	color:#6A6A46;
+}
+
+.nav>li:first-child>a {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.nav>.dropdown>a {
+	padding-right: 26px;
+}
+
+/* The arrow indicating a dropdown menu */
+.nav>.dropdown>a::after {
+	 content: "";
+	 position: absolute;
+	 top: 14px;
+	 right: 11px;
+	 width: 4px;
+	 height: 4px;
+	 border-bottom: 1px solid #333;
+	 border-right: 1px solid #333;
+	 -webkit-transform: rotate(45deg);
+	 -ms-transform: rotate(45deg);
+	 -moz-transform: rotate(45deg);
+	 -o-transform: rotate(45deg);
+	}
+
+/* Changing the color of the arrow on hover */
+.nav>.dropdown>a:hover::after, .nav>.dropdown:hover>a::after {
+	border-color: #6A6A46;
+}
+
+.nav ul {
+	position: relative;
+	position: absolute;
+	left: -9999px;
+	display: block;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+/* Level 1 submenus */
+.nav>li>ul {
+	padding-top: 0px;
+	z-index: 99;
+	border-top: 1px solid #c9c9c9;
+	top: 29px;
+}
+
+/* Making the level 1 submenu to appear on hover */
+.nav>li:hover>ul {
+	left: -1px;
+}
+
+/* Level 2+ submenus */
+.nav ul ul {
+	left: -9999px;
+	top: 0px;
+	z-index: 999;
+}
+
+/* Making the level 2+ submenu to appear on hover */
+.nav ul>li:hover>ul {
+	left: 120px;
+	top: -1px;
+}
+
+/* The submenu link containers */
+.nav ul li {
+	position: relative;
+	display: block;
+	border-left: 1px solid #c1c1c1;
+	border-right: 1px solid #c1c1c1;
+
+	/* Creating the slide effect. The list elements which contain the links have 0 height. On hover, they will expand */
+	height: 0px;
+	-webkit-transition: height .3s;
+	-moz-transition: height .3s;
+	-o-transition: height .3s;
+	-ms-transition: height .3s;
+}
+
+/* Expanding the list elements which contain the links */
+.nav li:hover>ul>li {
+	height: 25px;
+}
+
+.nav ul li:hover>ul>li:first-child {
+	height: 26px;
+}
+
+/* The links of the submenus */
+.nav ul li a {
+	/* Layout */
+	display: block;
+	width: 90px;
+	padding: 6px 10px 6px 20px;
+	border-bottom: 1px solid #e1e1e1;
+
+	/* Typography */
+	font-size: 12px;
+	color: #333333;
+	font-family: Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	
+	/* Background & effects */
+	background: #C9BA75;
+	-webkit-transition: background .3s;
+	-moz-transition: background .3s;
+	-ms-transition: background .3s;
+	-o-transition: background .3s;
+	transition: background .3s;
+}
+
+/* The hover state of the links */
+.nav ul li>a:hover, .nav ul li:hover>a {
+	background: #e9e9e9;
+	color: #a1a1a1;
+}
+
+.nav ul ul>li:first-child>a {
+	border-top: 1px solid #c1c1c1;
+}
+
+.nav ul>li:last-child>a {
+	border-bottom: 1px solid #c1c1c1;
+}
+
+
+/* The arrow indicating a level 2+ submenu */
+.nav ul>.dropdown>a::after {
+	content: "";
+	 position: absolute;
+	 top: 10px;
+	 right: 8px;
+	 width: 4px;
+	 height: 4px;
+	 border-bottom: 1px solid #333333;
+	 border-right: 1px solid #333333;
+	 -webkit-transform: rotate(-45deg);
+	 -ms-transform: rotate(-45deg);
+	 -moz-transform: rotate(-45deg);
+	 -o-transform: rotate(-45deg);
+}
+
+.nav ul>.dropdown:hover>a::after, .nav ul>.dropdown>a:hover::after {
+	border-color: #6a6a46;
+}
+
+
+#cnt-box {
+	padding: 0px;
+	margin: 12px auto 0px auto;
+	width: 650px;
+	position: relative;
+	overflow: visible;
+	
+}
+
+#footer {
+	padding: 0px;
+	margin: 10px 0px 0px 0px;
+	position: relative;
+	height: 212px;
+	background-image: url(' bgnd-btm.jpg');
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+
+#col-L {
+	width: 224px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	padding: 0px;
+	margin: 100px 0px 0px 300px;
+}
+#col-R {
+	width: 860px;
+	position: relative;
+	overflow: hidden;
+	float: right;
+	padding: 0px;
+	margin: 0px 68px 0px 0px;
+}
+
+#banner-L {
+	width: 326px;
+	position: relative;
+	overflow: visible;
+	float: left;
+	padding: 0px;
+	margin: 30px 0px 0px 136px;
+	height: 112px;
+}
+#banner-R {
+	background-position: center top;
+	overflow: visible;
+	padding: 0px;
+	margin: 16px 5px 0px 0px;
+	width: 260px;
+	position: relative;
+	height: 140px;
+	background-image: url('');
+	background-repeat: no-repeat;
+	float: right;
+}
+#banner-Hnav {
+	padding: 0px;
+	margin: 8px auto 0px auto;
+	width: 50%;
+	height: 26px;
+	position: relative;
+	list-style-type: none;
+}
+
+/* ==================== CLEARS AND FLOATS ==================== */
+
+.clearB {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.clearL {
+	clear: left;
+	padding: 0px;
+	margin: 0px;
+}
+
+.clearR {
+	clear: right;
+	padding: 0px;
+	margin: 0px;
+}
+.floatR {
+	padding: 0px;
+	margin: 0px 0px 5px 5px;
+}
+.floatL {
+	padding: 0px;
+	margin: 0px 5px 5px 0px;
+}
+
+/* ==================== SPANS AND HEADER TAGS ==================== */
+
+h1 {
+	padding: 2px;
+	margin: 0px 0px 8px 0px;
+	font-size: 120%;
+	color: #cdcdb4;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+h2 {
+	padding: 2px;
+	margin: 0px 0px 8px 0px;
+	font-size: 115%;
+	color: #cdcdb4;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+h3 {
+	padding: 2px;
+	margin: 0px 0px 8px 0px;
+	font-size: 110%;
+	color: #cdcdb4;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+h4 {
+	padding: 2px;
+	margin: 0px 0px 8px 0px;
+	font-size: 100%;
+	color: #cdcdb4;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+h5 {
+	padding: 2px;
+	margin: 0px 0px 8px 0px;
+	font-size: 90%;
+	color: #cdcdb4;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+h6 {
+	padding: 2px;
+	margin: 0px 0px 8px 0px;
+	font-size: 80%;
+	color: #cdcdb4;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+p {
+	color: #c4b470;
+	font-size: 96%;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+}
+
+
+
+
+
+.website-title {
+	font-size: 200%;
+	font-weight: bold;
+	text-align: left;
+	color: #c4b470;
+}
+.website-slogan {
+	font-style: italic;
+	font-size: 110%;
+	font-weight: normal;
+	text-align: left;
+	color: #c4b470;
+}
+.website-subslogan {
+	font-style: normal;
+	font-size: 80%;
+	font-weight: normal;
+	text-align: left;
+	color: #c4b470;
+}
+
+
+
+a.pl:link {
+	color: #c4b470;
+	text-decoration: none;
+	font-style: italic;
+}
+a.pl:active {
+	color: #c4b470;	
+	text-decoration: none;
+	font-style: italic;
+}
+a.pl:visited {
+	color: #c4b470;	
+	text-decoration: none;
+	font-style: italic;
+}
+a.pl:hover {
+	color: #cdcdb4;	
+	text-decoration: none;
+	font-style: italic;
+}
+
+
+/* ==================== CNT BOX ==================== */
+
+
+
+#cnt-top {
+	background-image: url(' cnt-top.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding: 0px;
+	margin: 0px;
+	width: 982px;
+	height: 75px;
+	overflow: hidden;
+	position: relative;	
+}
+#cnt-filler {
+	background-image: url(' cnt-filler.jpg');
+	background-repeat: repeat-y;
+	background-position: center top;
+	padding: 0px;
+	margin: 0px;
+	width: 982px;
+	overflow: hidden;
+	position: relative;
+}
+#cnt-btm {
+	background-image: url(' cnt-btm.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	padding: 0px;
+	margin: 0px;
+	width: 982px;
+	height: 54px;
+	overflow: hidden;
+	position: relative;
+}
+.spacer {
+	padding: 0px;
+	margin: 0px;
+	width: 982px;
+	height: 1px;
+	position: relative;
+}
+
+
+
+/* ==================== FOOTER ==================== */
+
+
+#footer-mid {
+	background-image: url(' footer.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding: 0px;
+	margin: 0px auto 0px auto;
+	width: 990px;
+	height: 212px;
+	position: relative;
+	overflow: hidden;
+}
+
+#footer-col-L {
+	position: relative;
+	width: 72px;
+	overflow: hidden;
+	float: left;
+	list-style-type: none;
+	padding: 0px;
+	margin: 55px 0px 0px 5px;
+	float: left;
+}
+
+
+#footer-col-M {
+	margin: 55px 18px 0px 18px;
+	padding: 0px;
+	width: 800px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	text-align: center;
+}
+
+
+#footer-col-R {
+	position: relative;
+	width: 72px;
+	overflow: hidden;
+	float: right;
+	list-style-type: none;
+	padding: 0px;
+	margin: 55px 5px 0px 0px;
+}
+
+
+#foot-title-section {
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	overflow: hidden;
+	font-size: 150%;
+	font-weight: bold;
+	color: #cdcdb4;
+	width: 90%;
+	height: 30px;
+	position: relative;
+}
+#foot-title-slogan {
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	overflow: hidden;
+	font-size: 110%;
+	font-weight: bold;
+	color: #cdcdb4;
+	width: 90%;
+	height: 20px;
+	position: relative;
+	font-style: italic;
+}
+#foot-disclaimer {
+	margin: 16px auto 0px auto;
+	padding: 0px;
+	overflow: hidden;
+	font-size: 80%;
+	font-weight: normal;
+	color: #c4b470;
+	width: 90%;
+	height: 14px;
+	position: relative;
+	font-style: italic;
+}
+.foot-contacts {
+	margin: 2px auto 0px auto;
+	padding: 0px;
+	overflow: hidden;
+	font-size: 90%;
+	font-weight: normal;
+	color: #c4b470;
+	width: 90%;
+	height: 14px;
+	position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== SIDE BLOCK ==================== */
+
+.sb-box {
+	padding: 0px;
+	margin: 0px 0px 15px 0px;
+	width: 224px;
+	position: relative;
+	overflow: hidden;
+}
+
+.sb-top {
+	padding: 0px;
+	margin: 0px;
+	width: 224px;
+	position: relative;
+	background-image: url(' sb-top.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 65px;
+}
+.sb-title {
+	margin: 0px auto 0px auto;
+	padding: 25px 0px 0px 0px;
+	width: 120px;
+	height: 20px;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+}
+.sb-filler {
+	background-image: url(' sb-filler.jpg');
+	background-repeat: repeat-y;
+	background-position: center top;
+	padding: 0px;
+	margin: 0px;
+	width: 224px;
+	position: relative;
+	overflow: hidden;
+}
+.sb-footer {
+	background-image: url(' sb-btm.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	margin: 0px;
+	padding: 0px;
+	width: 224px;
+	height: 40px;
+	position: relative;
+	overflow: hidden;
+}
+
+.sb-info {
+	padding: 0px;
+	margin: 0px auto 0px auto;
+	width: 184px;
+	position: relative;
+	overflow: visible;
+	text-align:center;
+	color:#fff;
+}
+.sb-clock {
+	padding: 0px;
+	margin: 0px auto 0px auto;
+	width: 130px;
+	position: relative;
+	overflow: visible;
+	height: 21px;
+}
+
+.sb-info ul {
+	padding : 0px;
+	margin : 0px;
+	list-style-type : none;
+	width : 184px;
+	position : relative;
+}
+.sb-info ul li {
+	padding : 0px;
+	margin : 0px;
+}
+.sb-info ul li a {
+	background-position : 0 0;
+	margin : 0;
+	display : inline;
+	padding : 0 0 0 20px;
+	color : #c4b470;
+	text-decoration : none;
+	font-size: 100%;
+	line-height : 160%;
+	text-align : left;
+	position : relative;
+	background-repeat : no-repeat;
+	background-image: url(' sprite-Vnav.jpg');
+}
+.sb-info li a.current {
+	background-position : left top;
+	color : #c4b470;
+}
+.sb-info li a:hover {
+	background-position : -184px 0;
+	color : #cdcdb4;
+	background-image : url(' sprite-Vnav.jpg');
+	background-repeat : no-repeat;
+}
+
+
+/* ==================== MAIN BLOCK ==================== */
+
+.main-box {
+	padding: 0px;
+	margin: 10px 0px 0px 0px;
+	width: 602px;
+	position: relative;
+	overflow: hidden;
+}
+
+.main-top {
+	padding: 0px;
+	margin: 0px;
+	width: 602px;
+	position: relative;
+	background-image: url(' main-top.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 32px;
+}
+.main-filler {
+	background-image: url(' main-filler.jpg');
+	background-repeat: repeat-y;
+	background-position: center top;
+	padding: 0px;
+	margin: 0px;
+	width: 602px;
+	position: relative;
+	overflow: hidden;
+}
+.main-footer {
+	background-image: url(' main-btm.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	margin: 0px;
+	padding: 0px;
+	width: 602px;
+	height: 45px;
+	position: relative;
+	overflow: hidden;
+}
+.main-info {
+	padding: 0px;
+	margin: 0px auto 0px auto;
+	width: 560px;
+	position: relative;
+	overflow: visible;
+	color: #c4b470;
+	font-size: 100%;
+	font-weight: normal;
+	text-decoration: none;
+}
+.main-divider {
+	background-image: url(' main-divider.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding: 0px;
+	margin: 8px 0px 8px 0px;
+	width: 602px;
+	height: 10px;
+	position: relative;
+}
+
+
+
+
+
+
+
+/* ==================== SOCIAL MEDIA ==================== */
+
+#social-media {
+	margin: 0px;
+	padding: 0px;
+	width: 72px;
+	height: 138px;
+	position: relative;
+	overflow: hidden;
+	list-style-type: none;
+}
+#social-media ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+#social-media ul li {
+	padding: 0px;
+	margin: 0px;
+	width: 72px;
+	height: 46px;
+	position: relative;
+	overflow: hidden;
+}
+a.FBbutton {
+	background: url(' facebook.png') no-repeat 0 -46px;
+	width: 72px;
+	height: 46px;
+	display: block;
+}
+a.FBbutton:hover {
+	background-position: 0 0;
+}
+a.FBbutton:active {
+	background-position: 0 0;
+}
+a.TWbutton {
+	background: url(' twitter.png') no-repeat 0 -46px;
+	width: 72px;
+	height: 46px;
+	display: block;
+}
+a.TWbutton:hover {
+	background-position: 0 0;
+}
+a.TWbutton:active {
+	background-position: 0 0;
+}
+a.YTbutton {
+	background: url(' youtube.png') no-repeat 0 -46px;
+	width: 72px;
+	height: 46px;
+	display: block;
+}
+a.YTbutton:hover {
+	background-position: 0 0;
+}
+a.YTbutton:active {
+	background-position: 0 0;
+}
+
